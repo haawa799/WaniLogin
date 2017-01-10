@@ -17,8 +17,6 @@
 		431AF5881E1AD65500515BE9 /* WaniLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 431AF5801E1AD65500515BE9 /* WaniLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		431AF58E1E1AD66A00515BE9 /* WaniLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431AF58D1E1AD66A00515BE9 /* WaniLoginCoordinator.swift */; };
 		431AF5901E1ADB1A00515BE9 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 431AF58F1E1ADB1A00515BE9 /* Cartfile */; };
-		4355E68D1E1AE2EB0038905F /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355E6871E1AE2C70038905F /* Cely.framework */; };
-		4355E68E1E1AE2EB0038905F /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4355E6881E1AE2C70038905F /* Locksmith.framework */; };
 		4355E6911E1AE3EE0038905F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355E6901E1AE3EE0038905F /* User.swift */; };
 		4355E6951E1AE7F90038905F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4355E6941E1AE7F90038905F /* Media.xcassets */; };
 		4355E6971E1AE9520038905F /* DummyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355E6961E1AE9520038905F /* DummyClass.swift */; };
@@ -27,6 +25,12 @@
 		438EB08B1E24EF5300D598A6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438EB0891E24EF5300D598A6 /* Login.storyboard */; };
 		438EB08C1E24EF5300D598A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB08A1E24EF5300D598A6 /* LoginViewController.swift */; };
 		438EB08E1E24F5A100D598A6 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 438EB08D1E24F5A100D598A6 /* Montserrat-Regular.otf */; };
+		43D191CB1E251D68000907A3 /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D191C91E251D68000907A3 /* Cely.framework */; };
+		43D191CC1E251D68000907A3 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D191CA1E251D68000907A3 /* Locksmith.framework */; };
+		43D191D31E251DC1000907A3 /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D191C91E251D68000907A3 /* Cely.framework */; };
+		43D191D41E251DC1000907A3 /* Cely.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43D191C91E251D68000907A3 /* Cely.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43D191D51E251DC1000907A3 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D191CA1E251D68000907A3 /* Locksmith.framework */; };
+		43D191D61E251DC1000907A3 /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43D191CA1E251D68000907A3 /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +50,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				43D191D61E251DC1000907A3 /* Locksmith.framework in Embed Frameworks */,
 				431AF5881E1AD65500515BE9 /* WaniLoginKit.framework in Embed Frameworks */,
+				43D191D41E251DC1000907A3 /* Cely.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,8 +72,6 @@
 		431AF5831E1AD65500515BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431AF58D1E1AD66A00515BE9 /* WaniLoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaniLoginCoordinator.swift; sourceTree = "<group>"; };
 		431AF58F1E1ADB1A00515BE9 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
-		4355E6871E1AE2C70038905F /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
-		4355E6881E1AE2C70038905F /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
 		4355E6901E1AE3EE0038905F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4355E6941E1AE7F90038905F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		4355E6961E1AE9520038905F /* DummyClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyClass.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 		438EB0891E24EF5300D598A6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		438EB08A1E24EF5300D598A6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		438EB08D1E24F5A100D598A6 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		43D191C91E251D68000907A3 /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
+		43D191CA1E251D68000907A3 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +89,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D191D51E251DC1000907A3 /* Locksmith.framework in Frameworks */,
 				431AF5871E1AD65500515BE9 /* WaniLoginKit.framework in Frameworks */,
+				43D191D31E251DC1000907A3 /* Cely.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,8 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4355E68D1E1AE2EB0038905F /* Cely.framework in Frameworks */,
-				4355E68E1E1AE2EB0038905F /* Locksmith.framework in Frameworks */,
+				43D191CB1E251D68000907A3 /* Cely.framework in Frameworks */,
+				43D191CC1E251D68000907A3 /* Locksmith.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,11 +110,10 @@
 		431AF55D1E1AD4D900515BE9 = {
 			isa = PBXGroup;
 			children = (
-				4355E6871E1AE2C70038905F /* Cely.framework */,
-				4355E6881E1AE2C70038905F /* Locksmith.framework */,
 				431AF5681E1AD4D900515BE9 /* WaniLogin */,
 				431AF5811E1AD65500515BE9 /* WaniLoginKit */,
 				431AF5671E1AD4D900515BE9 /* Products */,
+				43D191C81E251D68000907A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +156,15 @@
 				4355E6941E1AE7F90038905F /* Media.xcassets */,
 			);
 			path = WaniLoginKit;
+			sourceTree = "<group>";
+		};
+		43D191C81E251D68000907A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43D191C91E251D68000907A3 /* Cely.framework */,
+				43D191CA1E251D68000907A3 /* Locksmith.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
