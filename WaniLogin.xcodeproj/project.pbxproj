@@ -31,6 +31,8 @@
 		43D191D41E251DC1000907A3 /* Cely.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43D191C91E251D68000907A3 /* Cely.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43D191D51E251DC1000907A3 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D191CA1E251D68000907A3 /* Locksmith.framework */; };
 		43D191D61E251DC1000907A3 /* Locksmith.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43D191CA1E251D68000907A3 /* Locksmith.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43D191D91E2526E2000907A3 /* 3dDoge.gif in Resources */ = {isa = PBXBuildFile; fileRef = 43D191D81E2526E2000907A3 /* 3dDoge.gif */; };
+		43D191E11E2529F7000907A3 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D191E01E2529F7000907A3 /* UIImage+Gif.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,9 @@
 		438EB08D1E24F5A100D598A6 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
 		43D191C91E251D68000907A3 /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
 		43D191CA1E251D68000907A3 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
+		43D191D81E2526E2000907A3 /* 3dDoge.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3dDoge.gif; sourceTree = "<group>"; };
+		43D191DC1E252934000907A3 /* SwiftGif.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGif.framework; path = Carthage/Build/iOS/SwiftGif.framework; sourceTree = "<group>"; };
+		43D191E01E2529F7000907A3 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +157,10 @@
 				438EB0891E24EF5300D598A6 /* Login.storyboard */,
 				438EB08D1E24F5A100D598A6 /* Montserrat-Regular.otf */,
 				438EB08A1E24EF5300D598A6 /* LoginViewController.swift */,
+				43D191E01E2529F7000907A3 /* UIImage+Gif.swift */,
 				431AF5831E1AD65500515BE9 /* Info.plist */,
 				4355E6941E1AE7F90038905F /* Media.xcassets */,
+				43D191D81E2526E2000907A3 /* 3dDoge.gif */,
 			);
 			path = WaniLoginKit;
 			sourceTree = "<group>";
@@ -161,6 +168,7 @@
 		43D191C81E251D68000907A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43D191DC1E252934000907A3 /* SwiftGif.framework */,
 				43D191C91E251D68000907A3 /* Cely.framework */,
 				43D191CA1E251D68000907A3 /* Locksmith.framework */,
 			);
@@ -276,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D191D91E2526E2000907A3 /* 3dDoge.gif in Resources */,
 				4355E69C1E1BEF400038905F /* api_key_script.js in Resources */,
 				438EB08B1E24EF5300D598A6 /* Login.storyboard in Resources */,
 				4355E6951E1AE7F90038905F /* Media.xcassets in Resources */,
@@ -317,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D191E11E2529F7000907A3 /* UIImage+Gif.swift in Sources */,
 				4355E6971E1AE9520038905F /* DummyClass.swift in Sources */,
 				4355E6911E1AE3EE0038905F /* User.swift in Sources */,
 				438EB08C1E24EF5300D598A6 /* LoginViewController.swift in Sources */,

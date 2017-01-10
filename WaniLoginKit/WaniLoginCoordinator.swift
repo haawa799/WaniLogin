@@ -25,19 +25,26 @@ public struct WaniLoginCoordinator {
     Cely.logout()
     Cely.setup(with: window, forModel: User(), requiredProperties: [.apiKey], withOptions: [
       .loginStoryboard: UIStoryboard(name: "Login", bundle: Bundle(for: DummyClass.self)),
-      .loginCompletionBlock: { (username: String, password: String) in
+      .loginCompletionBlock: { (username: String, password: String, viewController: UIViewController?) in
+        
+        let viewController = viewController as? LoginViewController
+        viewController?.showOverlay {
+          
+        }
+        
         
         let loginVC = LoginWebViewController()
         loginVC.credentials = (username, password)
         loginVC.completionBlock = { result in
-          
-          switch result {
-          case .failure: self.showInvalidCredantials(vc: window.rootViewController)
-          case .success(let apiKey):
-            Cely.save(username, forKey: Key.username)
-            Cely.save(password, forKey: Key.password, securely: true)
-            Cely.save(apiKey, forKey: Key.apiKey, securely: true)
-            Cely.changeStatus(to: .loggedIn)
+          viewController?.hideOverlay{
+            switch result {
+            case .failure: self.showInvalidCredantials(vc: window.rootViewController)
+            case .success(let apiKey):
+              Cely.save(username, forKey: Key.username)
+              Cely.save(password, forKey: Key.password, securely: true)
+              Cely.save(apiKey, forKey: Key.apiKey, securely: true)
+              Cely.changeStatus(to: .loggedIn)
+            }
           }
         }
         

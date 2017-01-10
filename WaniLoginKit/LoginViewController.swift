@@ -13,6 +13,13 @@ class LoginViewController: UIViewController {
   
   // MARK: - IBOutlets
   
+  @IBOutlet weak var spinnerContainer: UIView!
+  @IBOutlet weak var spinnerImageView: UIImageView! {
+    didSet {
+      let bundle = Bundle(for: DummyClass.self)
+      spinnerImageView?.loadGif(name: "3dDoge", bundle: bundle)
+    }
+  }
   @IBOutlet weak var appImageView: UIImageView!
   @IBOutlet weak var usernameField: UITextField?
   @IBOutlet weak var passwordField: UITextField?
@@ -23,6 +30,38 @@ class LoginViewController: UIViewController {
   // MARK: - Variables
   var initialBottomConstant: CGFloat!
   var styles: CelyStyle?
+  
+  func showOverlay(completion: @escaping ()->()) {
+    _ = resignFirstResponder()
+    guard let container = spinnerContainer else { return }
+    container.alpha = 0
+    container.isHidden = false
+    UIView.animate(withDuration: 1.0, animations: {
+      container.alpha = 1
+    }) { (_) in
+      completion()
+    }
+  }
+  
+  func hideOverlay(completion: @escaping ()->()) {
+    _ = resignFirstResponder()
+    guard let container = spinnerContainer else { return }
+    container.isHidden = false
+    container.alpha = 1
+    UIView.animate(withDuration: 1.0, animations: {
+      container.alpha = 0
+    }) { (_) in
+      container.isHidden = true
+      completion()
+    }
+    
+  }
+  
+  override func resignFirstResponder() -> Bool {
+    usernameField?.resignFirstResponder()
+    passwordField?.resignFirstResponder()
+    return super.resignFirstResponder()
+  }
   
   // MARK: - ViewController Life Cycle
   override func viewDidLoad() {
@@ -58,7 +97,7 @@ class LoginViewController: UIViewController {
   
   func didPressLogin() {
     if let username = usernameField?.text, let password = passwordField?.text {
-      Cely.loginCompletionBlock?(username, password)
+      Cely.loginCompletionBlock?(username, password, self)
     }
   }
 }

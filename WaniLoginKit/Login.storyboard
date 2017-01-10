@@ -39,13 +39,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="290" height="704"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" image="wani_logo" translatesAutoresizingMaskIntoConstraints="NO" id="uGl-qw-sCA">
-                                                        <rect key="frame" x="25" y="0.0" width="240" height="541.5"/>
+                                                        <rect key="frame" x="25" y="0.0" width="240" height="542"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAl-nG-OL1">
-                                                        <rect key="frame" x="6" y="541.5" width="278" height="162.5"/>
+                                                        <rect key="frame" x="6" y="542" width="278" height="162"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" text="WaniKani" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f7N-na-SUU">
-                                                                <rect key="frame" x="0.0" y="51.5" width="278" height="61"/>
+                                                                <rect key="frame" x="0.0" y="50.5" width="278" height="61"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="50"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -156,6 +156,25 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="pxa-VT-vhX"/>
                                 </constraints>
                             </stackView>
+                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fG-Rj-bhV">
+                                <rect key="frame" x="0.5" y="0.0" width="768" height="1024"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XuP-y8-GAi">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sub-Nx-35w">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="sub-Nx-35w" firstAttribute="top" secondItem="XuP-y8-GAi" secondAttribute="top" id="2xL-k5-aCP"/>
+                                        <constraint firstItem="sub-Nx-35w" firstAttribute="leading" secondItem="XuP-y8-GAi" secondAttribute="leading" id="F8a-Rs-DGK"/>
+                                        <constraint firstAttribute="trailing" secondItem="sub-Nx-35w" secondAttribute="trailing" id="Nx2-wD-D4F"/>
+                                        <constraint firstAttribute="bottom" secondItem="sub-Nx-35w" secondAttribute="bottom" id="prN-PO-5C1"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -165,11 +184,15 @@
                             <constraint firstItem="VeF-xD-os1" firstAttribute="leading" secondItem="bxO-0I-Ha5" secondAttribute="leading" id="Ah3-ev-306"/>
                             <constraint firstItem="BQV-md-qOh" firstAttribute="width" secondItem="bxO-0I-Ha5" secondAttribute="width" priority="750" id="E5h-i4-KHN"/>
                             <constraint firstAttribute="bottom" secondItem="VeF-xD-os1" secondAttribute="bottom" id="Gif-9p-kMD"/>
+                            <constraint firstItem="0fG-Rj-bhV" firstAttribute="centerX" secondItem="bxO-0I-Ha5" secondAttribute="centerX" id="Qjx-S8-Rjg"/>
+                            <constraint firstItem="0fG-Rj-bhV" firstAttribute="centerY" secondItem="bxO-0I-Ha5" secondAttribute="centerY" id="Qq0-Uj-rpi"/>
                             <constraint firstItem="o0h-7c-xO5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="BQV-md-qOh" secondAttribute="bottom" constant="140" id="WYL-6b-SR0"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BQV-md-qOh" secondAttribute="trailing" constant="15" id="cgG-uc-wXy"/>
+                            <constraint firstItem="0fG-Rj-bhV" firstAttribute="height" secondItem="bxO-0I-Ha5" secondAttribute="height" id="e7e-xk-At4"/>
                             <constraint firstItem="BQV-md-qOh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bxO-0I-Ha5" secondAttribute="leading" constant="15" id="hN7-AC-Qhz"/>
                             <constraint firstItem="VeF-xD-os1" firstAttribute="top" secondItem="bxO-0I-Ha5" secondAttribute="top" id="iS8-ei-McZ"/>
                             <constraint firstItem="o0h-7c-xO5" firstAttribute="top" secondItem="BQV-md-qOh" secondAttribute="bottom" priority="750" constant="140" id="wji-nz-Ckq"/>
+                            <constraint firstItem="0fG-Rj-bhV" firstAttribute="width" secondItem="bxO-0I-Ha5" secondAttribute="width" id="xAh-35-tIx"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -178,6 +201,8 @@
                         <outlet property="bottomLayoutConstraint" destination="WYL-6b-SR0" id="7ag-nW-7Ym"/>
                         <outlet property="loginButton" destination="qqQ-aU-c4H" id="6wr-rR-gvu"/>
                         <outlet property="passwordField" destination="h4r-kd-DwE" id="4Po-h7-Tev"/>
+                        <outlet property="spinnerContainer" destination="0fG-Rj-bhV" id="SVk-8C-JnA"/>
+                        <outlet property="spinnerImageView" destination="sub-Nx-35w" id="hgt-JZ-h2R"/>
                         <outlet property="usernameField" destination="I5m-uC-019" id="Kvb-jc-hPC"/>
                         <outletCollection property="textFields" destination="I5m-uC-019" collectionClass="NSMutableArray" id="TcM-A0-M7b"/>
                         <outletCollection property="textFields" destination="h4r-kd-DwE" collectionClass="NSMutableArray" id="HM1-cw-u7L"/>
