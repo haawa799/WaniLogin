@@ -9,13 +9,19 @@
 import UIKit
 import Cely
 
-public struct WaniLoginCoordinator {
+public protocol WaniLoginCoordinatorDelegate: class {
+  func loginEndedWithResult(result: LoginResult, coordinator: WaniLoginCoordinator)
+}
+
+public class WaniLoginCoordinator {
   
   private struct Key {
     static let username = "username"
     static let password = "password"
     static let apiKey = "username"
   }
+  
+  public weak var delegate: WaniLoginCoordinatorDelegate?
   
   public init() {
     
@@ -32,19 +38,19 @@ public struct WaniLoginCoordinator {
           
         }
         
-        
         let loginVC = LoginWebViewController()
         loginVC.credentials = (username, password)
         loginVC.completionBlock = { result in
-          viewController?.hideOverlay{
+          viewController?.hideOverlay {
             switch result {
-            case .failure: self.showInvalidCredantials(vc: window.rootViewController)
+            case .failure: self.showInvalidCredantials(viewController: window.rootViewController)
             case .success(let apiKey):
               Cely.save(username, forKey: Key.username)
               Cely.save(password, forKey: Key.password, securely: true)
               Cely.save(apiKey, forKey: Key.apiKey, securely: true)
               Cely.changeStatus(to: .loggedIn)
             }
+            self.delegate?.loginEndedWithResult(result: result, coordinator: self)
           }
         }
         
@@ -54,14 +60,14 @@ public struct WaniLoginCoordinator {
       ])
   }
   
-  private func showInvalidCredantials(vc: UIViewController?) {
-    guard let vc = vc else { return }
+  private func showInvalidCredantials(viewController: UIViewController?) {
+    guard let viewController = viewController else { return }
     let alertViewController = UIAlertController(title: "Problem occured", message: "Invalid credentials", preferredStyle: .alert)
     let action = UIAlertAction(title: "Ok", style: .cancel) { (_) in
       Cely.changeStatus(to: .loggedOut)
     }
     alertViewController.addAction(action)
-    vc.present(alertViewController, animated: true, completion: nil)
+    viewController.present(alertViewController, animated: true, completion: nil)
   }
   
   public var userName: String? {

@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
   var initialBottomConstant: CGFloat!
   var styles: CelyStyle?
   
-  func showOverlay(completion: @escaping ()->()) {
+  func showOverlay(completion: @escaping () -> Void) {
     _ = resignFirstResponder()
     guard let container = spinnerContainer else { return }
     container.alpha = 0
@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
     }
   }
   
-  func hideOverlay(completion: @escaping ()->()) {
+  func hideOverlay(completion: @escaping () -> Void) {
     _ = resignFirstResponder()
     guard let container = spinnerContainer else { return }
     container.isHidden = false

@@ -77,7 +77,7 @@ extension UIImage {
             return delay
         }
 
-        let gifProperties:CFDictionary = unsafeBitCast(gifPropertiesPointer.pointee, to: CFDictionary.self)
+        let gifProperties: CFDictionary = unsafeBitCast(gifPropertiesPointer.pointee, to: CFDictionary.self)
 
         // Get delay time
         var delayObject: AnyObject = unsafeBitCast(
@@ -93,42 +93,42 @@ extension UIImage {
         return delay
     }
 
-    internal class func gcdForPair(_ a: Int?, _ b: Int?) -> Int {
-        var a = a
-        var b = b
+    internal class func gcdForPair(_ first: Int?, _ second: Int?) -> Int {
+        var first = first
+        var second = second
         // Check if one of them is nil
-        if b == nil || a == nil {
-            if b != nil {
-                return b!
-            } else if a != nil {
-                return a!
+        if second == nil || first == nil {
+            if second != nil {
+                return second!
+            } else if first != nil {
+                return first!
             } else {
                 return 0
             }
         }
 
         // Swap for modulo
-        if a! < b! {
-            let c = a
-            a = b
-            b = c
+        if first! < second! {
+            let c = first
+            first = second
+            second = c
         }
 
         // Get greatest common divisor
         var rest: Int
         while true {
-            rest = a! % b!
+            rest = first! % second!
 
             if rest == 0 {
-                return b! // Found it
+                return second! // Found it
             } else {
-                a = b
-                b = rest
+                first = second
+                second = rest
             }
         }
     }
 
-    internal class func gcdForArray(_ array: Array<Int>) -> Int {
+    internal class func gcdForArray(_ array: [Int]) -> Int {
         if array.isEmpty {
             return 1
         }

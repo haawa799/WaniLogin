@@ -9,13 +9,12 @@
 import UIKit
 import WebKit
 
-
 private enum ScriptHandler: String {
   case apiKey = "apikey"
   case invalidCredentials = "invalidCredentials"
 }
 
-enum LoginResult {
+public enum LoginResult {
   case success(apiKey: String)
   case failure
 }
@@ -23,7 +22,7 @@ enum LoginResult {
 class LoginWebViewController: UIViewController {
   
   var credentials: (user: String, password: String)?
-  var completionBlock: ((_ result: LoginResult)->Void)?
+  var completionBlock: ((_ result: LoginResult) -> Void)?
   var didTriedToLogin = false
   
   private var webView: WKWebView!
@@ -32,7 +31,6 @@ class LoginWebViewController: UIViewController {
     super.viewDidLoad()
     setupWebView()
   }
-  
   
   private func setupWebView() {
     guard let path = Bundle(for: DummyClass.self).path(forResource: "api_key_script", ofType: "js"), let js = try? String(contentsOfFile: path, encoding: String.Encoding.utf8) else { return }
@@ -68,7 +66,6 @@ extension LoginWebViewController: WKNavigationDelegate {
 extension LoginWebViewController: WKScriptMessageHandler {
   
   func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-    print(message.body as! String)
     guard let scriptHandler = ScriptHandler(rawValue: message.name) else { return }
     switch scriptHandler {
     case .apiKey:

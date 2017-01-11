@@ -13,13 +13,17 @@ import WaniLoginKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
-    let q = WaniLoginCoordinator()
-    q.start(window: window!)
+  let waniLoginCoordinator = WaniLoginCoordinator()
+  
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+    waniLoginCoordinator.start(window: window!)
+    waniLoginCoordinator.delegate = self
     return true
   }
-
 }
 
+extension AppDelegate: WaniLoginCoordinatorDelegate {
+  func loginEndedWithResult(result: LoginResult, coordinator: WaniLoginCoordinator) {
+    debugPrint(result)
+  }
+}
