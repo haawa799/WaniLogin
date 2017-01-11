@@ -18,24 +18,25 @@ public class WaniLoginCoordinator {
   private struct Key {
     static let username = "username"
     static let password = "password"
-    static let apiKey = "username"
+    static let apiKey = "apiKey"
   }
   
   public weak var delegate: WaniLoginCoordinatorDelegate?
   
   public init() {
-    
+  }
+  
+  public func logOut() {
+    Cely.logout()
   }
   
   public func start(window: UIWindow) {
-    Cely.logout()
     Cely.setup(with: window, forModel: User(), requiredProperties: [.apiKey], withOptions: [
       .loginStoryboard: UIStoryboard(name: "Login", bundle: Bundle(for: DummyClass.self)),
       .loginCompletionBlock: { (username: String, password: String, viewController: UIViewController?) in
         
         let viewController = viewController as? LoginViewController
         viewController?.showOverlay {
-          
         }
         
         let loginVC = LoginWebViewController()
@@ -60,16 +61,6 @@ public class WaniLoginCoordinator {
       ])
   }
   
-  private func showInvalidCredantials(viewController: UIViewController?) {
-    guard let viewController = viewController else { return }
-    let alertViewController = UIAlertController(title: "Problem occured", message: "Invalid credentials", preferredStyle: .alert)
-    let action = UIAlertAction(title: "Ok", style: .cancel) { (_) in
-      Cely.changeStatus(to: .loggedOut)
-    }
-    alertViewController.addAction(action)
-    viewController.present(alertViewController, animated: true, completion: nil)
-  }
-  
   public var userName: String? {
     return Cely.get(key: Key.username) as? String
   }
@@ -80,6 +71,21 @@ public class WaniLoginCoordinator {
   
   public var apiKey: String? {
     return Cely.get(key: Key.apiKey) as? String
+  }
+  
+}
+
+// MARK: - Private API
+fileprivate extension WaniLoginCoordinator {
+  
+  func showInvalidCredantials(viewController: UIViewController?) {
+    guard let viewController = viewController else { return }
+    let alertViewController = UIAlertController(title: "Problem occured", message: "Invalid credentials", preferredStyle: .alert)
+    let action = UIAlertAction(title: "Ok", style: .cancel) { (_) in
+      Cely.changeStatus(to: .loggedOut)
+    }
+    alertViewController.addAction(action)
+    viewController.present(alertViewController, animated: true, completion: nil)
   }
   
 }
