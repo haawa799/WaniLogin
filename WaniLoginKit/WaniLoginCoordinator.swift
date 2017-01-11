@@ -44,7 +44,7 @@ public class WaniLoginCoordinator {
         loginVC.completionBlock = { result in
           viewController?.hideOverlay {
             switch result {
-            case .failure: self.showInvalidCredantials(viewController: window.rootViewController)
+            case .failure: self.showInvalidCredantials(viewController: viewController)
             case .success(let apiKey):
               Cely.save(username, forKey: Key.username)
               Cely.save(password, forKey: Key.password, securely: true)
