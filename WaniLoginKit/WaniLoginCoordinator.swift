@@ -30,6 +30,10 @@ public class WaniLoginCoordinator {
     Cely.logout()
   }
   
+  public var isLoggedIn: Bool {
+    return Cely.isLoggedIn()
+  }
+  
   public func start(window: UIWindow) {
     Cely.setup(with: window, forModel: User(), requiredProperties: [.apiKey], withOptions: [
       .loginStoryboard: UIStoryboard(name: "Login", bundle: Bundle(for: DummyClass.self)),
