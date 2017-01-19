@@ -9,7 +9,7 @@
 import UIKit
 import Cely
 
-public protocol WaniLoginCoordinatorDelegate: class {
+public protocol WaniLoginCoordinatorDelegate: CelyWindowManagerDelegate {
   func loginEndedWithResult(result: LoginResult, coordinator: WaniLoginCoordinator)
 }
 
@@ -34,8 +34,8 @@ public class WaniLoginCoordinator {
     return Cely.isLoggedIn()
   }
   
-  public func start(window: UIWindow) {
-    Cely.setup(with: window, forModel: User(), requiredProperties: [.apiKey], withOptions: [
+  public func start(delegate: CelyWindowManagerDelegate, window: UIWindow) {
+    Cely.setup(delegate: delegate, window: window, forModel: User(), requiredProperties: [.apiKey], withOptions: [
       .loginStoryboard: UIStoryboard(name: "Login", bundle: Bundle(for: DummyClass.self)),
       .loginCompletionBlock: { (username: String, password: String, viewController: UIViewController?) in
         
