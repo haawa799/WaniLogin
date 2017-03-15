@@ -1,15 +1,9 @@
-
-$.get('/account').done(function(data, textStatus, jqXHR) {
-      var apiKey = findKeyInData(data);
-      webkit.messageHandlers.apikey.postMessage(apiKey);
-});
-
 function findKeyInData(data)  {
-	var apiKey = $(data).find('#api-button').parent().find('input').attr('value');
-	if (apiKey == '') {
-		apiKey = 'no';
-	}
-	return apiKey;
+  var apiKey = $(data).find('#api-button').parent().find('input').attr('value');
+  if (apiKey == '') {
+    apiKey = 'no';
+  }
+  return apiKey;
 }
 
 function findKey()  {
@@ -21,13 +15,13 @@ function findKey()  {
 }
 
 function openSettings() {
-	window.location.href = '/account';
+  window.location.href = '/account';
 }
 
 function generateNewKey() {
-	setTimeout(function() {
-		$('#api-button').click();
-	}, 1000);
+  setTimeout(function() {
+             $('#api-button').click();
+             }, 1000);
 }
 
 function registerToGrabCredentials() {

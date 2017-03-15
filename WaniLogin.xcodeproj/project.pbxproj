@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		431AF56A1E1AD4D900515BE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431AF5691E1AD4D900515BE9 /* AppDelegate.swift */; };
 		431AF56C1E1AD4D900515BE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431AF56B1E1AD4D900515BE9 /* ViewController.swift */; };
-		431AF56F1E1AD4D900515BE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431AF56D1E1AD4D900515BE9 /* Main.storyboard */; };
 		431AF5711E1AD4D900515BE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431AF5701E1AD4D900515BE9 /* Assets.xcassets */; };
 		431AF5741E1AD4D900515BE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431AF5721E1AD4D900515BE9 /* LaunchScreen.storyboard */; };
 		431AF5841E1AD65500515BE9 /* WaniLoginKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 431AF5821E1AD65500515BE9 /* WaniLoginKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,11 +19,15 @@
 		4355E6911E1AE3EE0038905F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355E6901E1AE3EE0038905F /* User.swift */; };
 		4355E6951E1AE7F90038905F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4355E6941E1AE7F90038905F /* Media.xcassets */; };
 		4355E6971E1AE9520038905F /* DummyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355E6961E1AE9520038905F /* DummyClass.swift */; };
-		4355E6991E1AEE520038905F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355E6981E1AEE520038905F /* WebViewController.swift */; };
+		4355E6991E1AEE520038905F /* LoginWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355E6981E1AEE520038905F /* LoginWebViewController.swift */; };
 		4355E69C1E1BEF400038905F /* api_key_script.js in Resources */ = {isa = PBXBuildFile; fileRef = 4355E69B1E1BEF400038905F /* api_key_script.js */; };
+		436536611E76F337005C0FA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431AF56D1E1AD4D900515BE9 /* Main.storyboard */; };
 		438EB08B1E24EF5300D598A6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438EB0891E24EF5300D598A6 /* Login.storyboard */; };
 		438EB08C1E24EF5300D598A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB08A1E24EF5300D598A6 /* LoginViewController.swift */; };
 		438EB08E1E24F5A100D598A6 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 438EB08D1E24F5A100D598A6 /* Montserrat-Regular.otf */; };
+		43B02A3E1E79841900F6874A /* wkwebview_callback_setup.js in Resources */ = {isa = PBXBuildFile; fileRef = 43B02A3D1E79841900F6874A /* wkwebview_callback_setup.js */; };
+		43B02A401E79994200F6874A /* ScriptsRelated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B02A3F1E79994200F6874A /* ScriptsRelated.swift */; };
+		43B02A421E799A9300F6874A /* LoginScripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B02A411E799A9300F6874A /* LoginScripts.swift */; };
 		43D191CB1E251D68000907A3 /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D191C91E251D68000907A3 /* Cely.framework */; };
 		43D191CC1E251D68000907A3 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D191CA1E251D68000907A3 /* Locksmith.framework */; };
 		43D191D31E251DC1000907A3 /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D191C91E251D68000907A3 /* Cely.framework */; };
@@ -77,11 +80,14 @@
 		4355E6901E1AE3EE0038905F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4355E6941E1AE7F90038905F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		4355E6961E1AE9520038905F /* DummyClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyClass.swift; sourceTree = "<group>"; };
-		4355E6981E1AEE520038905F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		4355E6981E1AEE520038905F /* LoginWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWebViewController.swift; sourceTree = "<group>"; };
 		4355E69B1E1BEF400038905F /* api_key_script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = api_key_script.js; sourceTree = "<group>"; };
 		438EB0891E24EF5300D598A6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		438EB08A1E24EF5300D598A6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		438EB08D1E24F5A100D598A6 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		43B02A3D1E79841900F6874A /* wkwebview_callback_setup.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = wkwebview_callback_setup.js; sourceTree = "<group>"; };
+		43B02A3F1E79994200F6874A /* ScriptsRelated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptsRelated.swift; sourceTree = "<group>"; };
+		43B02A411E799A9300F6874A /* LoginScripts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScripts.swift; sourceTree = "<group>"; };
 		43D191C91E251D68000907A3 /* Cely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cely.framework; path = Carthage/Build/iOS/Cely.framework; sourceTree = "<group>"; };
 		43D191CA1E251D68000907A3 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
 		43D191D81E2526E2000907A3 /* 3dDoge.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 3dDoge.gif; sourceTree = "<group>"; };
@@ -150,9 +156,12 @@
 			children = (
 				431AF5821E1AD65500515BE9 /* WaniLoginKit.h */,
 				4355E69B1E1BEF400038905F /* api_key_script.js */,
+				43B02A3D1E79841900F6874A /* wkwebview_callback_setup.js */,
 				4355E6901E1AE3EE0038905F /* User.swift */,
 				431AF58D1E1AD66A00515BE9 /* WaniLoginCoordinator.swift */,
-				4355E6981E1AEE520038905F /* WebViewController.swift */,
+				4355E6981E1AEE520038905F /* LoginWebViewController.swift */,
+				43B02A3F1E79994200F6874A /* ScriptsRelated.swift */,
+				43B02A411E799A9300F6874A /* LoginScripts.swift */,
 				4355E6961E1AE9520038905F /* DummyClass.swift */,
 				438EB0891E24EF5300D598A6 /* Login.storyboard */,
 				438EB08D1E24F5A100D598A6 /* Montserrat-Regular.otf */,
@@ -278,7 +287,7 @@
 				431AF5741E1AD4D900515BE9 /* LaunchScreen.storyboard in Resources */,
 				431AF5711E1AD4D900515BE9 /* Assets.xcassets in Resources */,
 				431AF5901E1ADB1A00515BE9 /* Cartfile in Resources */,
-				431AF56F1E1AD4D900515BE9 /* Main.storyboard in Resources */,
+				436536611E76F337005C0FA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +297,7 @@
 			files = (
 				43D191D91E2526E2000907A3 /* 3dDoge.gif in Resources */,
 				4355E69C1E1BEF400038905F /* api_key_script.js in Resources */,
+				43B02A3E1E79841900F6874A /* wkwebview_callback_setup.js in Resources */,
 				438EB08B1E24EF5300D598A6 /* Login.storyboard in Resources */,
 				4355E6951E1AE7F90038905F /* Media.xcassets in Resources */,
 				438EB08E1E24F5A100D598A6 /* Montserrat-Regular.otf in Resources */,
@@ -355,10 +365,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				43D191E11E2529F7000907A3 /* UIImage+Gif.swift in Sources */,
+				43B02A401E79994200F6874A /* ScriptsRelated.swift in Sources */,
 				4355E6971E1AE9520038905F /* DummyClass.swift in Sources */,
 				4355E6911E1AE3EE0038905F /* User.swift in Sources */,
 				438EB08C1E24EF5300D598A6 /* LoginViewController.swift in Sources */,
-				4355E6991E1AEE520038905F /* WebViewController.swift in Sources */,
+				4355E6991E1AEE520038905F /* LoginWebViewController.swift in Sources */,
+				43B02A421E799A9300F6874A /* LoginScripts.swift in Sources */,
 				431AF58E1E1AD66A00515BE9 /* WaniLoginCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

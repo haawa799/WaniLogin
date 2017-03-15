@@ -17,8 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   let waniLoginCoordinator = WaniLoginCoordinator()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-    waniLoginCoordinator.start(delegate: self, window: window!)
+    let window = UIWindow(frame: UIScreen.main.bounds)
+    window.makeKeyAndVisible()
+    waniLoginCoordinator.start(delegate: self, window: window)
     waniLoginCoordinator.delegate = self
+    self.window = window
     return true
   }
 }
@@ -29,7 +32,7 @@ extension AppDelegate: WaniLoginCoordinatorDelegate {
   }
 
   var shouldTryUsingMainStoryboard: Bool {
-    return true
+    return false
   }
 
   func presentingCallback(window: UIWindow, status: CelyStatus) {
