@@ -1,5 +1,5 @@
 function findKeyInData(data)  {
-  var apiKey = $(data).find('#api-button').parent().find('input').attr('value');
+  var apiKey = $(data).find('#user_api_key').attr('value');
   if (apiKey == '') {
     apiKey = 'no';
   }
@@ -7,7 +7,7 @@ function findKeyInData(data)  {
 }
 
 function findKey()  {
-  var apiKey = $('#api-button').parent().find('input').attr('value');
+  var apiKey = $('#user_api_key').attr('value');
   if (apiKey == '') {
     apiKey = 'no';
   }
@@ -15,12 +15,12 @@ function findKey()  {
 }
 
 function openSettings() {
-  window.location.href = '/account';
+  window.location.href = '/settings/account';
 }
 
 function generateNewKey() {
   setTimeout(function() {
-             $('#api-button').click();
+             $("button[name='commit']").click();
              }, 1000);
 }
 
