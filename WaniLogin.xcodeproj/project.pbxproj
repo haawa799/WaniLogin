@@ -206,6 +206,7 @@
 				431AF5631E1AD4D900515BE9 /* Frameworks */,
 				431AF5641E1AD4D900515BE9 /* Resources */,
 				431AF58C1E1AD65500515BE9 /* Embed Frameworks */,
+				43FFAB891EEB3433007CEE89 /* ShellScript */,
 				4311F3D21E26366500D31EA2 /* ShellScript */,
 			);
 			buildRules = (
@@ -226,7 +227,6 @@
 				431AF57C1E1AD65500515BE9 /* Frameworks */,
 				431AF57D1E1AD65500515BE9 /* Headers */,
 				431AF57E1E1AD65500515BE9 /* Resources */,
-				4355E68F1E1AE2F40038905F /* ShellScript */,
 				4311F3D11E26365400D31EA2 /* ShellScript */,
 			);
 			buildRules = (
@@ -333,7 +333,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		4355E68F1E1AE2F40038905F /* ShellScript */ = {
+		43FFAB891EEB3433007CEE89 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -346,7 +346,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
