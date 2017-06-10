@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aIY-uz-m5q">
-    <device id="ipad9_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aIY-uz-m5q">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,29 +23,29 @@
                         <viewControllerLayoutGuide type="bottom" id="o0h-7c-xO5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bxO-0I-Ha5">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="VeF-xD-os1">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BQV-md-qOh">
-                                <rect key="frame" x="134" y="10" width="500" height="874"/>
+                                <rect key="frame" x="262" y="10" width="500" height="618"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygv-V6-Mce">
-                                        <rect key="frame" x="105" y="0.0" width="290" height="704"/>
+                                        <rect key="frame" x="105" y="0.0" width="290" height="448"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LwF-rE-b5J">
-                                                <rect key="frame" x="0.0" y="0.0" width="290" height="704"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="448"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" image="wani_logo" translatesAutoresizingMaskIntoConstraints="NO" id="uGl-qw-sCA">
-                                                        <rect key="frame" x="25" y="0.0" width="240" height="542"/>
+                                                        <rect key="frame" x="25" y="0.0" width="240" height="345"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAl-nG-OL1">
-                                                        <rect key="frame" x="6" y="542" width="278" height="162"/>
+                                                        <rect key="frame" x="6" y="345" width="278" height="103"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" text="WaniKani" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f7N-na-SUU">
-                                                                <rect key="frame" x="0.0" y="50.5" width="278" height="61"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="278" height="61"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="50"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -80,7 +80,7 @@
                                         </variation>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cXi-U6-Ba0">
-                                        <rect key="frame" x="0.0" y="714" width="500" height="160"/>
+                                        <rect key="frame" x="0.0" y="458" width="500" height="160"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7sb-5Z-aFS">
                                                 <rect key="frame" x="0.0" y="0.0" width="500" height="100"/>
@@ -91,6 +91,7 @@
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username or email" textAlignment="justified" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="I5m-uC-019">
                                                                 <rect key="frame" x="0.0" y="0.0" width="500" height="40"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <accessibility key="accessibilityConfiguration" label="username"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
@@ -116,6 +117,7 @@
                                                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="justified" clearsOnBeginEditing="YES" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="h4r-kd-DwE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="500" height="40"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <accessibility key="accessibilityConfiguration" label="password"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -140,6 +142,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqQ-aU-c4H">
                                                 <rect key="frame" x="0.0" y="120" width="500" height="40"/>
                                                 <color key="backgroundColor" red="0.80784313725490198" green="0.19215686274509802" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" label="login-button"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="dBC-z2-hBe"/>
                                                 </constraints>
@@ -157,20 +160,25 @@
                                 </constraints>
                             </stackView>
                             <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fG-Rj-bhV">
-                                <rect key="frame" x="0.5" y="0.0" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XuP-y8-GAi">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sub-Nx-35w">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                            <rect key="frame" x="305" y="0.0" width="414" height="768"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="414" id="nGF-Ve-bnB"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="sub-Nx-35w" firstAttribute="top" secondItem="XuP-y8-GAi" secondAttribute="top" id="2xL-k5-aCP"/>
-                                        <constraint firstItem="sub-Nx-35w" firstAttribute="leading" secondItem="XuP-y8-GAi" secondAttribute="leading" id="F8a-Rs-DGK"/>
-                                        <constraint firstAttribute="trailing" secondItem="sub-Nx-35w" secondAttribute="trailing" id="Nx2-wD-D4F"/>
-                                        <constraint firstAttribute="bottom" secondItem="sub-Nx-35w" secondAttribute="bottom" id="prN-PO-5C1"/>
+                                        <constraint firstItem="sub-Nx-35w" firstAttribute="top" secondItem="XuP-y8-GAi" secondAttribute="top" priority="750" id="2xL-k5-aCP"/>
+                                        <constraint firstItem="sub-Nx-35w" firstAttribute="leading" secondItem="XuP-y8-GAi" secondAttribute="leading" priority="750" id="F8a-Rs-DGK"/>
+                                        <constraint firstItem="sub-Nx-35w" firstAttribute="centerY" secondItem="XuP-y8-GAi" secondAttribute="centerY" id="MFX-go-PWF"/>
+                                        <constraint firstAttribute="trailing" secondItem="sub-Nx-35w" secondAttribute="trailing" priority="750" id="Nx2-wD-D4F"/>
+                                        <constraint firstItem="sub-Nx-35w" firstAttribute="centerX" secondItem="XuP-y8-GAi" secondAttribute="centerX" id="eMg-Dc-LfH"/>
+                                        <constraint firstAttribute="bottom" secondItem="sub-Nx-35w" secondAttribute="bottom" priority="750" id="prN-PO-5C1"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="light"/>
