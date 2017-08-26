@@ -13,16 +13,7 @@ class LoginViewController: UIViewController {
   
   // MARK: - IBOutlets
   
-  @IBOutlet weak var warningLabel: UILabel! {
-    didSet {
-      let attributedString = NSMutableAttributedString(string:"Have trouble loggin in? Check if you have API key generated here")
-      let linkWasSet = attributedString.setAsLink("here", linkURL: "https://www.wanikani.com/settings/account")
-      
-      if linkWasSet {
-        // adjust more attributedString properties
-      }
-    }
-  }
+  @IBOutlet weak var warningLabel: UILabel!
   @IBOutlet weak var spinnerContainer: UIView!
   @IBOutlet weak var spinnerImageView: UIImageView! {
     didSet {
@@ -63,6 +54,10 @@ class LoginViewController: UIViewController {
     }) { (_) in
       container.isHidden = true
       completion()
+    }
+    
+    DispatchQueue.main.asyncAfter(deadline: .now() + 4) { 
+      self.warningLabel?.isHidden = false
     }
     
   }
