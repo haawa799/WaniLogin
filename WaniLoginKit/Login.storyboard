@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aIY-uz-m5q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aIY-uz-m5q">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -45,7 +45,7 @@
                                                         <rect key="frame" x="6" y="345" width="278" height="103"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" text="WaniKani" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f7N-na-SUU">
-                                                                <rect key="frame" x="0.0" y="21.5" width="278" height="61"/>
+                                                                <rect key="frame" x="0.0" y="21" width="278" height="61"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="50"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -171,6 +171,12 @@
                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="414" id="nGF-Ve-bnB"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvY-Em-s2d">
+                                            <rect key="frame" x="15" y="753" width="994" height="0.0"/>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                            <color key="textColor" red="0.93333333330000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="sub-Nx-35w" firstAttribute="top" secondItem="XuP-y8-GAi" secondAttribute="top" priority="750" id="2xL-k5-aCP"/>
@@ -178,7 +184,10 @@
                                         <constraint firstItem="sub-Nx-35w" firstAttribute="centerY" secondItem="XuP-y8-GAi" secondAttribute="centerY" id="MFX-go-PWF"/>
                                         <constraint firstAttribute="trailing" secondItem="sub-Nx-35w" secondAttribute="trailing" priority="750" id="Nx2-wD-D4F"/>
                                         <constraint firstItem="sub-Nx-35w" firstAttribute="centerX" secondItem="XuP-y8-GAi" secondAttribute="centerX" id="eMg-Dc-LfH"/>
+                                        <constraint firstAttribute="trailing" secondItem="hvY-Em-s2d" secondAttribute="trailing" constant="15" id="jAe-1a-1AZ"/>
                                         <constraint firstAttribute="bottom" secondItem="sub-Nx-35w" secondAttribute="bottom" priority="750" id="prN-PO-5C1"/>
+                                        <constraint firstItem="hvY-Em-s2d" firstAttribute="leading" secondItem="XuP-y8-GAi" secondAttribute="leading" constant="15" id="qgn-65-g1n"/>
+                                        <constraint firstAttribute="bottom" secondItem="hvY-Em-s2d" secondAttribute="bottom" constant="15" id="taa-6e-70O"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="light"/>
@@ -212,6 +221,7 @@
                         <outlet property="spinnerContainer" destination="0fG-Rj-bhV" id="SVk-8C-JnA"/>
                         <outlet property="spinnerImageView" destination="sub-Nx-35w" id="hgt-JZ-h2R"/>
                         <outlet property="usernameField" destination="I5m-uC-019" id="Kvb-jc-hPC"/>
+                        <outlet property="warningLabel" destination="hvY-Em-s2d" id="9bc-y2-ljU"/>
                         <outletCollection property="textFields" destination="I5m-uC-019" collectionClass="NSMutableArray" id="TcM-A0-M7b"/>
                         <outletCollection property="textFields" destination="h4r-kd-DwE" collectionClass="NSMutableArray" id="HM1-cw-u7L"/>
                     </connections>
