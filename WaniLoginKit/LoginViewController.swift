@@ -42,6 +42,10 @@ class LoginViewController: UIViewController {
     }) { (_) in
       completion()
     }
+    
+    DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+      self.warningLabel?.isHidden = false
+    }
   }
   
   func hideOverlay(completion: @escaping () -> Void) {
@@ -54,10 +58,6 @@ class LoginViewController: UIViewController {
     }) { (_) in
       container.isHidden = true
       completion()
-    }
-    
-    DispatchQueue.main.asyncAfter(deadline: .now() + 4) { 
-      self.warningLabel?.isHidden = false
     }
     
   }
